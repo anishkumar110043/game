@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+  <audio id="bgMusic" src="bg-music.mp3" loop></audio>
+  <audio id="clickSound" src="click.mp3"></audio>
+  <audio id="winSound" src="win.mp3"></audio>
+
+<body>
+
+  <div class="start-screen" id="startScreen">
+    <h1>Enter Player Names</h1>
+    <input type="text" id="player1" placeholder="Player 1 Name (X)" />
+    <input type="text" id="player2" placeholder="Player 2 Name (O)" />
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div class="game-container" id="gameContainer" style="display: none;">
+    <h2 id="playerTurn">Turn: </h2>
+    <div class="board" id="board"></div>
+    <button onclick="restartGame()">Restart</button>
+    <button id="backBtn" onclick="goBackToHome()">Back to Home</button>
+  </div>
+
+  <div class="win-screen" id="winScreen" style="display: none;">
+    <div id="winMessage">
+      <h2 id="winnerText"></h2>
+      <button onclick="restartGame()">Play Again</button>
+      <button id="backBtn" onclick="goBackToHome()">Back to Home</button>
+    </div>
+  </div>
+
+  <!-- Audio Elements -->
+  <audio id="bgMusic" src="bg-music.mp3" loop></audio>
+  <audio id="clickSound" src="click.mp3"></audio>
+  <audio id="winSound" src="win.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
